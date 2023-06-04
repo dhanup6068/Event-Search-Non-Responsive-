@@ -56,7 +56,7 @@ async function submit1(event) {
 
       var address = document.getElementById("loc").value;
       console.log(address)
-      var url='https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&key=AIzaSyDTnjsGYC8KKF2bMksLtWDERYhh4uPJB_o';
+      var url='https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&key=apikey';
 
       const response = await fetch(url);
       const jsonData = await response.json();
