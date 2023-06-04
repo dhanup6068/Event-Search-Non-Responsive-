@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../static/hw6.css" type="text/css">
+  <script src="../static/hw6.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div align="center">
+    <div class="form">
+    <p class='header' style="color:white;">Events Search</p>
+    <div>
+      
+      <form name="myForm" method="GET" onsubmit="submit1(event)">
+        <hr style="width:590px; margin-top:-10px;">
+          <div class="Keyword" align="left">
+            <label style="color:#24a1bd; font-family: Verdana, Geneva, Tahoma, sans-serif;" for="kword" >Keyword</label><span class="required-field"></span><br>
+            <input style="color:white;margin-top:5px;" type="text" id="kword" name="kword" required><br>
+          </div>
+
+          <div class="distance" align="left" style="float:left;">
+            <label style="color:#24a1bd;font-family: Verdana, Geneva, Tahoma, sans-serif;" for="dist">Distance(miles)</label><br>
+            <input style="color:white;margin-top:5px;" type="number" id="dist" name="dist" placeholder="10" value="10" min="0" >
+          </div>
+
+          <div class="category" align="left" >
+            <label style="color:#24a1bd;font-family: Verdana, Geneva, Tahoma, sans-serif;" for="category" >Category</label><span class="required-field"></span><br>
+              <select style="color:white ;font-family: Verdana, Geneva, Tahoma, sans-serif;margin-top:5px;" id="category" name="category">
+                <option value="Default">Default</option>
+                <option value="Music">Music</option>
+                <option value="Sports">Sports</option>
+                <option value="ArtsTheatre">Arts & Theatre</option>
+                <option value="Film">Film</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+              </select>
+          </div>
+
+        <div class="location" align="left">
+          <label style="color:#24a1bd;font-family: Verdana, Geneva, Tahoma, sans-serif;" for="loc" >Location</label><span class="required-field"></span>
+          <input type="checkbox" id="location" onclick="getLatLon()" name="location" >
+          <label style="color:whitesmoke;font-family: Verdana, Geneva, Tahoma, sans-serif;" for="location">Auto-Detect Location </label><br>
+          <input style="color:white;margin-top:5px;" type="text" id="loc" name="loc"><br><br>
+        </div>
+        
+        <input type="submit" id="submit" value="SEARCH">
+        <input type="reset" id="reset" onclick="reset1()" value="CLEAR">
+      </form> 
+    </div>
+  </div>
+  <br>
+  <br>
+  <div id="no-records-found"></div>
+  <div  align="center">
+    <table id="tableData" >
+   </table>
+   
+  </div>
+    
+  <br>
+
+  <div id="events">
+    <div align="center"  id="eventname">
+    </div>   
+    <div style="float: right; width:400px; height:500px" id="seatmap">
+    </div>
+    <div id="eventdetails" style="float: left;width:400px; height:500px;" align="left" >
+    </div> 
+
+  </div>
+  <br>
+      <div align="center" id="venuedetails">
+
+      </div>
+  
+  <br>
+
+    <div id="Venueaddress">
+      <div align="center"  id="venuename">
+      </div><br>
+      <div style="float: left; width:400px; " id="venue1">
+      </div>
+      <div id="venue2" style="float: right; width:400px;">
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
+
+    
